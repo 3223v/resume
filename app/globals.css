@@ -1,26 +1,203 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --surface: #f7f8f5;
+  --paper: #ffffff;
+  --ink: #18201f;
+  --muted: #68716f;
+  --line: rgba(24, 32, 31, 0.08);
+  --wash: #edf5f0;
+  --accent: #4fa68a;
+  --accent-dark: #1f6f5c;
+  --sun: #f0c766;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Aptos", "Segoe UI", sans-serif;
+  --font-display: "Cormorant Garamond", "Baskerville", "Songti SC", Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--surface);
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background:
+    linear-gradient(120deg, rgba(79, 166, 138, 0.08), transparent 32rem),
+    linear-gradient(280deg, rgba(240, 199, 102, 0.12), transparent 28rem),
+    var(--surface);
+  color: var(--ink);
+  font-family: "Aptos", "Segoe UI", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(79, 166, 138, 0.22);
+}
+
+.font-display {
+  font-family: "Cormorant Garamond", "Baskerville", "Songti SC", Georgia, serif;
+  letter-spacing: 0;
+}
+
+.hero-shell {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.58)),
+    radial-gradient(circle at 82% 16%, rgba(79, 166, 138, 0.12), transparent 24rem);
+}
+
+.hero-shell::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background-image:
+    linear-gradient(rgba(24, 32, 31, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 32, 31, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.overview-panel {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: 0 30px 80px rgba(24, 32, 31, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.page-section {
+  padding: clamp(4rem, 9vw, 7rem) 1.25rem clamp(3rem, 6vw, 5rem);
+}
+
+.section-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.project-visual {
+  position: relative;
+  min-height: 230px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.5)),
+    linear-gradient(160deg, var(--visual-a), var(--visual-b));
+}
+
+.project-visual::before {
+  position: absolute;
+  inset: 24px;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.56), transparent),
+    repeating-linear-gradient(0deg, rgba(24, 32, 31, 0.08), rgba(24, 32, 31, 0.08) 1px, transparent 1px, transparent 28px);
+}
+
+.tone-mist {
+  --visual-a: #d8f0e8;
+  --visual-b: #f7d988;
+}
+
+.tone-paper {
+  --visual-a: #f4eee2;
+  --visual-b: #b9ded2;
+}
+
+.tone-clinic {
+  --visual-a: #e7f7f8;
+  --visual-b: #d9e7b7;
+}
+
+.visual-line,
+.visual-mark,
+.visual-dot {
+  position: absolute;
+  display: block;
+}
+
+.visual-line {
+  height: 1px;
+  background: rgba(24, 32, 31, 0.2);
+  transform: rotate(-18deg);
+}
+
+.visual-line-a {
+  left: 18%;
+  top: 40%;
+  width: 62%;
+}
+
+.visual-line-b {
+  left: 32%;
+  top: 58%;
+  width: 42%;
+}
+
+.visual-mark {
+  right: 17%;
+  top: 24%;
+  width: 74px;
+  height: 74px;
+  border: 1px solid rgba(24, 32, 31, 0.18);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.46);
+  box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.28);
+}
+
+.visual-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.visual-dot-a {
+  left: 22%;
+  top: 36%;
+}
+
+.visual-dot-b {
+  right: 26%;
+  bottom: 30%;
+  background: var(--accent-dark);
+}
+
+.article-body {
+  color: var(--ink);
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+.article-body p + p {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .project-visual {
+    min-height: 190px;
+  }
+
+  .overview-panel {
+    padding: 1rem;
+  }
 }

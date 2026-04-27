@@ -1,65 +1,89 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArticleCard } from "@/components/content-cards";
+import { ProjectVisual, SiteShell } from "@/components/site-shell";
+import { getResumeData } from "@/lib/resume-data";
 
 export default function Home() {
+  const data = getResumeData();
+  const featuredProject = data.projects[0];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <SiteShell>
+      <section className="hero-shell">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-24">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--accent)]">{data.profile.role}</p>
+            <h1 className="mt-6 max-w-4xl text-balance font-display text-6xl font-semibold leading-[0.92] text-[var(--ink)] sm:text-8xl">
+              Calm systems for ambitious digital products.
+            </h1>
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--muted)]">{data.profile.summary}</p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link href="/portfolio" className="rounded-full bg-[var(--ink)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--accent-dark)]">
+                查看作品
+              </Link>
+              <Link href="/about" className="rounded-full border border-black/10 bg-white px-6 py-3 text-sm font-semibold text-[var(--ink)] transition hover:border-[var(--accent)]">
+                了解经历
+              </Link>
+            </div>
+          </div>
+          <div className="overview-panel">
+            <div className="flex items-start justify-between gap-6">
+              <div>
+                <p className="text-sm text-[var(--muted)]">Current focus</p>
+                <h2 className="mt-2 text-3xl font-semibold">{data.profile.availability}</h2>
+              </div>
+              <span className="rounded-full bg-[var(--wash)] px-3 py-1 text-xs font-semibold text-[var(--accent-dark)]">2026</span>
+            </div>
+            <div className="mt-10 grid grid-cols-3 gap-3">
+              {data.stats.map((stat) => (
+                <div key={stat.label} className="rounded-[8px] border border-black/6 bg-white p-4">
+                  <p className="text-3xl font-semibold">{stat.value}</p>
+                  <p className="mt-2 text-xs leading-5 text-[var(--muted)]">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 overflow-hidden rounded-[8px] border border-black/8 bg-white">
+              <ProjectVisual tone={featuredProject.coverTone} label="Featured project visual" />
+              <div className="p-5">
+                <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Featured work</p>
+                <h3 className="mt-2 text-xl font-semibold">{featuredProject.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{featuredProject.summary}</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+        <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
+          <div>
+            <p className="section-kicker">Snapshot</p>
+            <h2 className="mt-3 text-4xl font-semibold">能快速建立信任的关键信息。</h2>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {data.skills.map((skill) => (
+              <div key={skill.group} className="rounded-[8px] border border-black/8 bg-white p-6">
+                <h3 className="font-semibold">{skill.group}</h3>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {skill.items.slice(0, 5).map((item) => (
+                    <span key={item} className="rounded-full bg-[var(--wash)] px-3 py-1 text-xs text-[var(--muted)]">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="bg-white py-16">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-3">
+          {data.articles.slice(0, 3).map((article) => (
+            <ArticleCard key={article.slug} article={article} />
+          ))}
+        </div>
+      </section>
+    </SiteShell>
   );
 }

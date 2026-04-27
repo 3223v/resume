@@ -1,0 +1,158 @@
+{
+  "profile": {
+    "name": "童家豪 (Tong Jiahao)",
+    "role": "Product-minded Full-stack Engineer",
+    "location": "Shanghai / Remote",
+    "email": "hello@linzhiyuan.dev",
+    "phone": "+86 138 0000 2026",
+    "availability": "Open to senior frontend and product engineering roles",
+    "summary": "I build calm, fast, and maintainable digital products with a strong sense for product detail, information architecture, and craft.",
+    "bio": [
+      "过去 7 年专注于 Web 产品、设计系统与数据可视化，习惯从业务目标、用户任务和工程可维护性之间寻找平衡点。",
+      "我偏好小而稳定的团队，喜欢把复杂流程整理成可复用的系统，并用清晰的界面帮助用户更快做出判断。"
+    ],
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/3223v" },
+      { "label": "LinkedIn", "href": "https://linkedin.com/in/example" },
+      { "label": "Portfolio", "href": "/portfolio" }
+    ]
+  },
+  "stats": [
+    { "value": "7+", "label": "Years building products" },
+    { "value": "28", "label": "Shipped product modules" },
+    { "value": "4", "label": "Design systems maintained" }
+  ],
+  "skills": [
+    {
+      "group": "Product Engineering",
+      "items": ["Next.js", "React", "TypeScript", "Node.js", "API design", "Performance"]
+    },
+    {
+      "group": "Experience Design",
+      "items": ["Design systems", "Interaction design", "Information architecture", "Accessibility"]
+    },
+    {
+      "group": "Systems",
+      "items": ["PostgreSQL", "Observability", "CI/CD", "Testing strategy", "Technical writing"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Northstar Studio",
+      "role": "Senior Product Engineer",
+      "period": "2022 - Present",
+      "description": "Led frontend architecture for a multi-tenant analytics product used by growth, finance, and operations teams.",
+      "highlights": [
+        "Built a composable dashboard framework that reduced new report delivery time by 45%.",
+        "Introduced shared interaction patterns across tables, charts, filters, and export flows.",
+        "Partnered with design to establish a white-label component system for enterprise customers."
+      ]
+    },
+    {
+      "company": "Flowbase",
+      "role": "Frontend Engineer",
+      "period": "2019 - 2022",
+      "description": "Delivered workflow tools for operations teams, focusing on task triage, permission models, and audit-friendly UI.",
+      "highlights": [
+        "Improved core workflow completion rate by simplifying the review surface.",
+        "Migrated legacy pages into a modern React and API-driven architecture."
+      ]
+    },
+    {
+      "company": "Early Projects",
+      "role": "Web Developer",
+      "period": "2017 - 2019",
+      "description": "Built campaign sites, internal tools, and content systems for education and culture clients.",
+      "highlights": [
+        "Developed reusable page templates for editorial teams.",
+        "Created performance budgets and deployment checklists for small teams."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Tongji University",
+      "degree": "B.Eng. Software Engineering",
+      "period": "2013 - 2017"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "aurora-dashboard",
+      "title": "Aurora Dashboard",
+      "category": "Analytics Platform",
+      "year": "2025",
+      "summary": "A modular operating dashboard for revenue, retention, and product usage teams.",
+      "description": "Aurora Dashboard brings scattered metrics into a flexible work surface. It combines fast filtering, clean chart primitives, and narrative annotations so teams can make decisions without exporting data to separate tools.",
+      "impact": ["45% faster dashboard delivery", "18 reusable visualization blocks", "Enterprise-ready theming"],
+      "stack": ["Next.js", "React Server Components", "PostgreSQL", "ECharts"],
+      "coverTone": "mist",
+      "role": "Frontend architecture, data model, interaction design"
+    },
+    {
+      "slug": "folio-os",
+      "title": "Folio OS",
+      "category": "Personal Knowledge System",
+      "year": "2024",
+      "summary": "A calm knowledge workspace for collecting notes, decisions, and reusable research fragments.",
+      "description": "Folio OS treats notes as living material instead of static pages. It supports connected writing, source tracking, and lightweight review rituals for people who need to turn research into decisions.",
+      "impact": ["Unified notes and references", "Reduced duplicate research", "Designed for daily review"],
+      "stack": ["React", "SQLite", "Markdown", "Search indexing"],
+      "coverTone": "paper",
+      "role": "Product design, frontend implementation, content model"
+    },
+    {
+      "slug": "signal-care",
+      "title": "Signal Care",
+      "category": "Healthcare Workflow",
+      "year": "2023",
+      "summary": "A care coordination interface that helps teams prioritize urgent patient follow-ups.",
+      "description": "Signal Care organizes high-volume follow-up work into a readable command center. The design emphasizes confidence, traceability, and gentle alerting rather than noisy urgency.",
+      "impact": ["32% shorter triage time", "Clear audit trail", "Accessible color system"],
+      "stack": ["TypeScript", "Node.js", "Design System", "Testing Library"],
+      "coverTone": "clinic",
+      "role": "Interface systems, accessibility, workflow prototyping"
+    }
+  ],
+  "articles": [
+    {
+      "slug": "designing-resume-systems",
+      "title": "Designing a Resume as a Living System",
+      "date": "2026-03-18",
+      "readTime": "5 min read",
+      "excerpt": "A resume can be more than a static document when its structure reflects the way you actually work.",
+      "tags": ["Career", "Content Systems"],
+      "content": [
+        "A good resume site should answer two questions quickly: what kind of work this person does, and whether their judgment feels trustworthy.",
+        "The fastest path is not always more visual noise. Clear hierarchy, strong verbs, and carefully selected proof points often communicate seniority better than a crowded page.",
+        "Treat the data model as the core product. Once profile, projects, roles, writing, and links are structured, the interface can evolve without rewriting the story each time."
+      ]
+    },
+    {
+      "slug": "white-space-as-interface",
+      "title": "White Space as Interface Material",
+      "date": "2026-02-07",
+      "readTime": "4 min read",
+      "excerpt": "White space is not emptiness. It is a way to make decisions feel quieter and faster.",
+      "tags": ["Design", "Frontend"],
+      "content": [
+        "White interfaces succeed when spacing, typography, and edges do real work. Without that discipline, a light theme quickly turns into a blank sheet.",
+        "The trick is to give every layer a job: background for rest, borders for grouping, subtle color for orientation, and type for momentum.",
+        "When the system is restrained, small details become visible. That is where perceived quality often lives."
+      ]
+    },
+    {
+      "slug": "portfolio-proof",
+      "title": "Make Portfolio Projects Prove Something",
+      "date": "2025-12-11",
+      "readTime": "6 min read",
+      "excerpt": "A portfolio project is strongest when it explains the problem, your role, and the measurable change.",
+      "tags": ["Portfolio", "Product"],
+      "content": [
+        "Screenshots alone rarely tell the whole story. The reader needs to understand the context that made the work difficult.",
+        "Strong project pages separate responsibility from outcome. What did you own, what constraints mattered, and what changed after the work shipped?",
+        "The most credible portfolios are selective. They use fewer projects, sharper framing, and richer evidence."
+      ]
+    }
+  ]
+}
