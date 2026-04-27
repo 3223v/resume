@@ -38,42 +38,27 @@
   ],
   "experience": [
     {
-      "company": "Northstar Studio",
-      "role": "Senior Product Engineer",
-      "period": "2022 - Present",
+      "company": "杭州袋鼠云",
+      "role": "后端开发工程师",
+      "period": "2026/1 - 2026/4",
       "description": "Led frontend architecture for a multi-tenant analytics product used by growth, finance, and operations teams.",
       "highlights": [
         "Built a composable dashboard framework that reduced new report delivery time by 45%.",
         "Introduced shared interaction patterns across tables, charts, filters, and export flows.",
         "Partnered with design to establish a white-label component system for enterprise customers."
       ]
-    },
-    {
-      "company": "Flowbase",
-      "role": "Frontend Engineer",
-      "period": "2019 - 2022",
-      "description": "Delivered workflow tools for operations teams, focusing on task triage, permission models, and audit-friendly UI.",
-      "highlights": [
-        "Improved core workflow completion rate by simplifying the review surface.",
-        "Migrated legacy pages into a modern React and API-driven architecture."
-      ]
-    },
-    {
-      "company": "Early Projects",
-      "role": "Web Developer",
-      "period": "2017 - 2019",
-      "description": "Built campaign sites, internal tools, and content systems for education and culture clients.",
-      "highlights": [
-        "Developed reusable page templates for editorial teams.",
-        "Created performance budgets and deployment checklists for small teams."
-      ]
     }
   ],
   "education": [
     {
-      "school": "Tongji University",
-      "degree": "B.Eng. Software Engineering",
-      "period": "2013 - 2017"
+      "school": "University of Chinese Academy of Sciences",
+      "degree": "Master of Software Engineering",
+      "period": "2026 - 2029"
+    },
+    {
+      "school": "JiLin University",
+      "degree": "Bachelor of Computer Science and Technology",
+      "period": "2022 - 2026"
     }
   ],
   "projects": [
@@ -116,7 +101,7 @@
   ],
   "articles": [
     {
-      "slug": "designing-resume-systems",
+      "slug": "test",
       "title": "Designing a Resume as a Living System",
       "date": "2026-03-18",
       "readTime": "5 min read",
