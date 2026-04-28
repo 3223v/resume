@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Lin Zhiyuan Resume",
+  title: "Tong's Resume",
   description: "A clean, extensible personal resume and portfolio system.",
 };
 

@@ -8,8 +8,8 @@ export default function PortfolioPage() {
   return (
     <SiteShell>
       <section className="page-section">
-        <SectionIntro eyebrow="Selected Work" title="作品集">
-          每个项目都包含背景、职责、影响和技术栈，方便继续扩展为完整 case study。
+        <SectionIntro eyebrow="Selected Work" title="项目信息">
+          项目包含详细设计，主要功能，快速体验。
         </SectionIntro>
       </section>
       <section className="mx-auto grid max-w-7xl gap-6 px-5 pb-20 sm:px-8 lg:grid-cols-3">

@@ -14,7 +14,7 @@ export default function Home() {
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--accent)]">{data.profile.role}</p>
             <h1 className="mt-6 max-w-4xl text-balance font-display text-6xl font-semibold leading-[0.92] text-[var(--ink)] sm:text-8xl">
-              Calm systems for ambitious digital products.
+              Calm systems, thoughtful details, and a human touch.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--muted)]">{data.profile.summary}</p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -58,7 +58,7 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
           <div>
             <p className="section-kicker">Snapshot</p>
-            <h2 className="mt-3 text-4xl font-semibold">能快速建立信任的关键信息。</h2>
+            <h2 className="mt-3 text-4xl font-semibold">关键标签。</h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {data.skills.map((skill) => (

@@ -4,7 +4,7 @@ import { getResumeData } from "@/lib/resume-data";
 const navigation = [
   { href: "/", label: "快速了解" },
   { href: "/about", label: "详细信息" },
-  { href: "/portfolio", label: "作品集" },
+  { href: "/portfolio", label: "项目信息" },
   { href: "/blog", label: "博客" }
 ];
 
@@ -39,7 +39,7 @@ export function SiteShell({ children }) {
       <main>{children}</main>
       <footer className="border-t border-black/6 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <p>© 2026 {profile.name}. Built as an extensible resume system.</p>
+          <p>© 2026 {profile.name}. Built by codex.</p>
           <div className="flex gap-4">
             {profile.links.map((link) => (
               <a key={link.label} href={link.href} className="transition hover:text-[var(--ink)]">

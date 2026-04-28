@@ -1,39 +1,41 @@
 {
   "profile": {
     "name": "童家豪 (Tong Jiahao)",
-    "role": "Product-minded Full-stack Engineer",
-    "location": "Shanghai / Remote",
-    "email": "hello@linzhiyuan.dev",
-    "phone": "+86 138 0000 2026",
-    "availability": "Open to senior frontend and product engineering roles",
-    "summary": "I build calm, fast, and maintainable digital products with a strong sense for product detail, information architecture, and craft.",
+    "role": "开发工程师",
+    "location": "Beijing / Remote",
+    "email": "tongjiahao04@qq.com",
+    "phone": "+86 17263942414",
+    "availability": "后台开发/实习，欢迎联系！",
+    "summary": "do it for fun, do it for growth, do it for impact.",
     "bio": [
-      "过去 7 年专注于 Web 产品、设计系统与数据可视化，习惯从业务目标、用户任务和工程可维护性之间寻找平衡点。",
-      "我偏好小而稳定的团队，喜欢把复杂流程整理成可复用的系统，并用清晰的界面帮助用户更快做出判断。"
+      "熟悉Java基础,JAVA并发,JVM等技术,高效地完成开发任务。",
+      "熟练使用Spring Boot,Sping MVC,Mybatis Plus框架进行后端开发。",
+      "熟悉Redis,Mysql,Kafka等常用的后端技术栈,能够独立设计和优化系统架构。",
+      "学习计算机网络、数据结构与算法、操作系统等计算机基础知识,为开发工作提供坚实的理论支持。"
     ],
     "links": [
       { "label": "GitHub", "href": "https://github.com/3223v" },
-      { "label": "LinkedIn", "href": "https://linkedin.com/in/example" },
-      { "label": "Portfolio", "href": "/portfolio" }
+      { "label": "Gitee", "href": "https://gitee.com/mttkjj" },
+      { "label": "Zhihu", "href": "https://www.zhihu.com/people/futari-20-55" }
     ]
   },
   "stats": [
-    { "value": "7+", "label": "Years building products" },
-    { "value": "28", "label": "Shipped product modules" },
-    { "value": "4", "label": "Design systems maintained" }
+    { "value": "3+", "label": "项目总数" },
+    { "value": "5", "label": "博客总数" },
+    { "value": "3", "label": "阅读技术文章日均" }
   ],
   "skills": [
     {
-      "group": "Product Engineering",
-      "items": ["Next.js", "React", "TypeScript", "Node.js", "API design", "Performance"]
+      "group": "开发能力",
+      "items": ["Java", "Next.js", "LangGraph"]
     },
     {
-      "group": "Experience Design",
-      "items": ["Design systems", "Interaction design", "Information architecture", "Accessibility"]
+      "group": "系统能力",
+      "items": ["Redis", "MySQL", "Kafka", "Git"]
     },
     {
-      "group": "Systems",
-      "items": ["PostgreSQL", "Observability", "CI/CD", "Testing strategy", "Technical writing"]
+      "group": "其他",
+      "items": ["计算机网络", "数据结构与算法", "操作系统","CET-4","Vibe coding"]
     }
   ],
   "experience": [
@@ -41,103 +43,211 @@
       "company": "杭州袋鼠云",
       "role": "后端开发工程师",
       "period": "2026/1 - 2026/4",
-      "description": "Led frontend architecture for a multi-tenant analytics product used by growth, finance, and operations teams.",
+      "description": "实习公司主要业务是为用户提供3D孪生数据平台，实习期间参与了数据平台的后端开发工作，主要负责AI+业务开发与重构。",
       "highlights": [
-        "Built a composable dashboard framework that reduced new report delivery time by 45%.",
-        "Introduced shared interaction patterns across tables, charts, filters, and export flows.",
-        "Partnered with design to establish a white-label component system for enterprise customers."
+        "AI_Canvas：参与 AI_Canvas 业务需求，构建自然语言驱动的画布编排能力，支持用户通过对话生成任务树，生成和调整可视化组件，从提问、意图分析、任务编排到组件落库和SSE流式回显。",
+        "多厂商大模型统一接入与流式适配：参与 AI 平台接入层建设，统一封装多厂商模型平台的 SSE 通信、事件解析和错误处理逻辑，使业务层仅面向标准化领域结果编程，沉淀 AiChatClient、AiPlatformStrategy、ProfiledOkHttpClient 等组件，降低业务层对模型平台的耦合。",
+        "PostgreSQL JSONB 动态配置建模与 TypeHandler 落地：参与构建 JSONB 动态建模方案，封装 JsonbTypeHandler和JsonbListTypeHandler，实现 PostgreSQL JSONB 与 Java 对象映射，支撑 AI 生成配置的稳定落库与演进。",
+        "其他内容：实现自定义Token与URL分享大屏，Token分享支持自定义访问次数和访问时间；调研并对比主流链路追踪方案，理解链路追踪实现原理与部署方案。"
       ]
     }
   ],
   "education": [
     {
-      "school": "University of Chinese Academy of Sciences",
-      "degree": "Master of Software Engineering",
+      "school": "中国科学院大学软件研究所",
+      "degree": "软件工程",
       "period": "2026 - 2029"
     },
     {
-      "school": "JiLin University",
-      "degree": "Bachelor of Computer Science and Technology",
+      "school": "吉林大学",
+      "degree": "计算机科学与技术",
       "period": "2022 - 2026"
+    }
+  ],
+  "thing":[
+    {
+      "role":"全国计算机博弈大赛二等奖",
+      "name":"组员",
+      "time":"2024/4-2024/8",
+      "description":"采用剪枝搜索算法，基于C++开发了一个五子棋程序，在全国计算机博弈大赛中获得二等奖",
+      "highlights":[
+        "在解空间树中递归搜索，剪枝算法去除不合理分支，寻找最优解决策"
+      ]
     }
   ],
   "projects": [
     {
-      "slug": "aurora-dashboard",
-      "title": "Aurora Dashboard",
-      "category": "Analytics Platform",
-      "year": "2025",
-      "summary": "A modular operating dashboard for revenue, retention, and product usage teams.",
-      "description": "Aurora Dashboard brings scattered metrics into a flexible work surface. It combines fast filtering, clean chart primitives, and narrative annotations so teams can make decisions without exporting data to separate tools.",
-      "impact": ["45% faster dashboard delivery", "18 reusable visualization blocks", "Enterprise-ready theming"],
-      "stack": ["Next.js", "React Server Components", "PostgreSQL", "ECharts"],
-      "coverTone": "mist",
-      "role": "Frontend architecture, data model, interaction design"
-    },
-    {
-      "slug": "folio-os",
-      "title": "Folio OS",
-      "category": "Personal Knowledge System",
+      "slug": "message-push-platform",
+      "title": "消息推送平台",
+      "category": "比赛项目",
       "year": "2024",
-      "summary": "A calm knowledge workspace for collecting notes, decisions, and reusable research fragments.",
-      "description": "Folio OS treats notes as living material instead of static pages. It supports connected writing, source tracking, and lightweight review rituals for people who need to turn research into decisions.",
-      "impact": ["Unified notes and references", "Reduced duplicate research", "Designed for daily review"],
-      "stack": ["React", "SQLite", "Markdown", "Search indexing"],
-      "coverTone": "paper",
-      "role": "Product design, frontend implementation, content model"
+      "summary": "基于 SpringBoot + Mysql + Redis + Kafka 开发的消息推送平台，支持多渠道异步推送消息。",
+      "stack": ["Java", "SpringBoot", "MySQL", "Redis", "Kafka"],
+      "coverTone": "mist",
+      "link": "",
+      "highlights": [
+        "支持邮件、短信、飞书多渠道推送，异步任务队列处理百万级消息不丢失",
+        "可视化后台管理平台，支持模板编辑、定时推送、推送结果统计分析",
+        "实现消息重试机制和死信队列，确保推送可靠性和可追溯性"
+      ],
+      "design": "采用生产者-消费者模式架构，Kafka 作为消息队列中间件实现异步解耦。前端使用模板引擎动态生成消息内容，后端通过策略模式支持多渠道适配。数据库采用主从复制提高读性能，Redis 缓存热点消息模板和用户推送历史。",
+      "features": [
+        "多渠道统一推送：邮件、短信、飞书、推送等渠道统一接口",
+        "消息模板管理：支持变量替换、富文本编辑、预览发送",
+        "推送统计分析：实时展示推送成功率、失败原因、用户交互率",
+        "定时任务调度：支持单次、定时、周期性推送"
+      ],
+      "demo": {
+        "type": "interactive-api",
+        "title": "API 接口体验",
+        "description": "尝试调用消息推送 API 接口",
+        "content": {
+          "endpoint": "https://api.example.com/messages/send",
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "exampleParams": {
+            "channels": ["email", "sms"],
+            "template": "welcome",
+            "variables": {
+              "name": "用户名",
+              "code": "123456"
+            }
+          },
+          "exampleResponse": {
+            "code": 200,
+            "message": "success",
+            "data": {
+              "task_id": "task_12345",
+              "channels": ["email", "sms"],
+              "status": "processing"
+            }
+          }
+        }
+      }
     },
     {
-      "slug": "signal-care",
-      "title": "Signal Care",
-      "category": "Healthcare Workflow",
-      "year": "2023",
-      "summary": "A care coordination interface that helps teams prioritize urgent patient follow-ups.",
-      "description": "Signal Care organizes high-volume follow-up work into a readable command center. The design emphasizes confidence, traceability, and gentle alerting rather than noisy urgency.",
-      "impact": ["32% shorter triage time", "Clear audit trail", "Accessible color system"],
-      "stack": ["TypeScript", "Node.js", "Design System", "Testing Library"],
-      "coverTone": "clinic",
-      "role": "Interface systems, accessibility, workflow prototyping"
+      "slug": "video-platform",
+      "title": "短视频平台",
+      "category": "学校企业实训项目",
+      "year": "2024",
+      "summary": "基于 React + MySQL 开发的短视频社交平台，支持视频上传、推荐流、评论互动。",
+      "stack": ["React", "Node.js", "MySQL", "FFmpeg", "Redis"],
+      "coverTone": "paper",
+      "link": "",
+      "highlights": [
+        "实现信息流推荐算法，根据用户观看历史和点赞行为个性化推荐视频内容",
+        "支持视频上传自动转码处理，生成多清晰度版本适配不同网络环境",
+        "实现实时评论系统和用户互动功能，支持弹幕、点赞、收藏"
+      ],
+      "design": "前端采用虚拟滚动优化信息流渲染性能，后端使用微服务架构分离视频处理、推荐、社交三大模块。推荐算法基于用户行为数据进行协同过滤，视频处理使用 FFmpeg 异步转码，元数据存储在 MySQL，热点数据缓存在 Redis。",
+      "features": [
+        "视频上传与转码：支持多格式上传，自动生成 1080p/720p/480p 多清晰度版本",
+        "个性化推荐流：基于用户观看历史和行为的推荐算法",
+        "社交互动系统：评论、弹幕、点赞、收藏、分享、关注等功能",
+        "用户管理后台：视频审核、用户数据分析、内容管理"
+      ],
+      "demo": {
+        "type": "image-gallery",
+        "title": "平台截图",
+        "description": "短视频平台功能展示",
+        "content": {
+          "images": [
+            {"title": "信息流页面", "url": ""},
+            {"title": "视频详情页", "url": ""},
+            {"title": "用户中心", "url": ""}
+          ]
+        }
+      }
+    },
+    {
+      "slug": "xtplay-platform",
+      "title": "基于AI的多用户模拟系统",
+      "category": "个人项目",
+      "year": "2026",
+      "summary": "基于 React + MySQL 开发的短视频社交平台，支持视频上传、推荐流、评论互动。",
+      "stack": ["React", "AI","Codex","Vibe coding"],
+      "coverTone": "program",
+      "link": "",
+      "highlights": [
+        "实现信息流推荐算法，根据用户观看历史和点赞行为个性化推荐视频内容",
+        "支持视频上传自动转码处理，生成多清晰度版本适配不同网络环境",
+        "实现实时评论系统和用户互动功能，支持弹幕、点赞、收藏"
+      ],
+      "design": "前端采用虚拟滚动优化信息流渲染性能，后端使用微服务架构分离视频处理、推荐、社交三大模块。推荐算法基于用户行为数据进行协同过滤，视频处理使用 FFmpeg 异步转码，元数据存储在 MySQL，热点数据缓存在 Redis。",
+      "features": [
+        "视频上传与转码：支持多格式上传，自动生成 1080p/720p/480p 多清晰度版本",
+        "个性化推荐流：基于用户观看历史和行为的推荐算法",
+        "社交互动系统：评论、弹幕、点赞、收藏、分享、关注等功能",
+        "用户管理后台：视频审核、用户数据分析、内容管理"
+      ],
+      "demo": {
+        "type": "image-gallery",
+        "title": "平台截图",
+        "description": "短视频平台功能展示",
+        "content": {
+          "images": [
+            {"title": "信息流页面", "url": ""},
+            {"title": "视频详情页", "url": ""},
+            {"title": "用户中心", "url": ""}
+          ]
+        }
+      }
+    },
+    {
+      "slug": "makent",
+      "title": "通用Agent系统",
+      "category": "个人项目",
+      "year": "2026",
+      "summary": "基于 React + MySQL 开发的短视频社交平台，支持视频上传、推荐流、评论互动。",
+      "stack": ["Python"],
+      "coverTone": "paper",
+      "link": "",
+      "highlights": [
+        "实现信息流推荐算法，根据用户观看历史和点赞行为个性化推荐视频内容",
+        "支持视频上传自动转码处理，生成多清晰度版本适配不同网络环境",
+        "实现实时评论系统和用户互动功能，支持弹幕、点赞、收藏"
+      ],
+      "design": "前端采用虚拟滚动优化信息流渲染性能，后端使用微服务架构分离视频处理、推荐、社交三大模块。推荐算法基于用户行为数据进行协同过滤，视频处理使用 FFmpeg 异步转码，元数据存储在 MySQL，热点数据缓存在 Redis。",
+      "features": [
+        "视频上传与转码：支持多格式上传，自动生成 1080p/720p/480p 多清晰度版本",
+        "个性化推荐流：基于用户观看历史和行为的推荐算法",
+        "社交互动系统：评论、弹幕、点赞、收藏、分享、关注等功能",
+        "用户管理后台：视频审核、用户数据分析、内容管理"
+      ],
+      "demo": {
+        "type": "image-gallery",
+        "title": "平台截图",
+        "description": "短视频平台功能展示",
+        "content": {
+          "images": [
+            {"title": "信息流页面", "url": ""},
+            {"title": "视频详情页", "url": ""},
+            {"title": "用户中心", "url": ""}
+          ]
+        }
+      }
     }
   ],
   "articles": [
     {
-      "slug": "test",
-      "title": "Designing a Resume as a Living System",
+      "slug": "agent-introduction",
+      "title": "Agent系统概论",
       "date": "2026-03-18",
       "readTime": "5 min read",
-      "excerpt": "A resume can be more than a static document when its structure reflects the way you actually work.",
-      "tags": ["Career", "Content Systems"],
-      "content": [
-        "A good resume site should answer two questions quickly: what kind of work this person does, and whether their judgment feels trustworthy.",
-        "The fastest path is not always more visual noise. Clear hierarchy, strong verbs, and carefully selected proof points often communicate seniority better than a crowded page.",
-        "Treat the data model as the core product. Once profile, projects, roles, writing, and links are structured, the interface can evolve without rewriting the story each time."
-      ]
+      "excerpt": "初步介绍Agent系统的概念，工作流程，构建方法",
+      "tags": ["Agent", "AI"],
+      "content": "<h2>为什么简历需要是活的系统</h2><p>一份好的简历网站应该快速回答两个问题：这个人做什么工作，他们的判断力是否值得信任。</p><p>最快的路径并不总是更多的视觉噪音。清晰的信息层级、有力的动词和精心挑选的证明点通常比拥挤的页面更能传达专业性。</p><h2>数据模型是核心</h2><p>把数据模型当作核心产品。一旦档案、项目、角色、写作和链接结构化了，界面就可以在不重写故事的情况下演进。这意味着你可以从不同的角度展示相同的信息，而不需要重新整理内容。</p><p>这种方法使得简历系统能够长期维护，每次添加新项目或经验时，界面会自动适应。</p>"
     },
     {
-      "slug": "white-space-as-interface",
-      "title": "White Space as Interface Material",
+      "slug": "test-article",
+      "title": "测试标题显示",
       "date": "2026-02-07",
       "readTime": "4 min read",
-      "excerpt": "White space is not emptiness. It is a way to make decisions feel quieter and faster.",
-      "tags": ["Design", "Frontend"],
-      "content": [
-        "White interfaces succeed when spacing, typography, and edges do real work. Without that discipline, a light theme quickly turns into a blank sheet.",
-        "The trick is to give every layer a job: background for rest, borders for grouping, subtle color for orientation, and type for momentum.",
-        "When the system is restrained, small details become visible. That is where perceived quality often lives."
-      ]
-    },
-    {
-      "slug": "portfolio-proof",
-      "title": "Make Portfolio Projects Prove Something",
-      "date": "2025-12-11",
-      "readTime": "6 min read",
-      "excerpt": "A portfolio project is strongest when it explains the problem, your role, and the measurable change.",
-      "tags": ["Portfolio", "Product"],
-      "content": [
-        "Screenshots alone rarely tell the whole story. The reader needs to understand the context that made the work difficult.",
-        "Strong project pages separate responsibility from outcome. What did you own, what constraints mattered, and what changed after the work shipped?",
-        "The most credible portfolios are selective. They use fewer projects, sharper framing, and richer evidence."
-      ]
+      "excerpt": "测试摘录显示.",
+      "tags": ["Test", "测试"],
+      "content": "<h2>测试h2标签</h2><p>测试p标签</p><h2>每个层级都要有用途</h2><p>技巧是给每个层级分配工作：背景用于放松、边界用于分组、微妙的颜色用于方向、排版用于动力。当系统受到限制时，细节就变得可见。那正是感知质量往往存在的地方。</p><p>通过精心选择字体、控制色彩使用和谨慎的空间，可以创造出既简洁又充满意图的界面。这种方法在高端产品中特别有效。</p>"
     }
   ]
 }
