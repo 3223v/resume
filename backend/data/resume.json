@@ -79,53 +79,82 @@
     {
       "slug": "message-push-platform",
       "title": "消息推送平台",
-      "category": "比赛项目",
+      "category": "个人项目",
       "year": "2024",
-      "summary": "基于 SpringBoot + Mysql + Redis + Kafka 开发的消息推送平台，支持多渠道异步推送消息。",
-      "stack": ["Java", "SpringBoot", "MySQL", "Redis", "Kafka"],
+      "summary": "基于 SpringBoot + MySQL + Redis + Kafka 的企业级消息推送中心，支持多渠道（邮件、短信、飞书）统一推送，具备模板管理、定时发送、优先级队列、限流控制、失败重试等能力。",
+      "stack": ["Java 17", "Spring Boot 3.3", "MyBatis-Plus", "Redis", "Kafka", "MySQL"],
       "coverTone": "mist",
-      "link": "",
+      "link": "https://github.com/3223v/msgcenter",
       "highlights": [
-        "支持邮件、短信、飞书多渠道推送，异步任务队列处理百万级消息不丢失",
-        "可视化后台管理平台，支持模板编辑、定时推送、推送结果统计分析",
-        "实现消息重试机制和死信队列，确保推送可靠性和可追溯性"
+        "MySQL/Kafka 双模式消息队列：支持通过配置切换 MySQL 动态表名或 Kafka Topic 作为消息中转站",
+        "多级优先级队列：基于 Redis 分布式锁实现 Leader 选举，保证高优先消息优先消费",
+        "定时消息可靠投递：Redis ZSET + MySQL 双存储，Lua 脚本保证到期消息原子触发",
+        "两级限流机制：业务源配额 + 全局配额，Redis INCR 滑动窗口计数器实现精准流量控制",
+        "渠道策略模式：Email/SMS/Lark 多渠道统一接口，扩展新渠道零改动"
       ],
-      "design": "采用生产者-消费者模式架构，Kafka 作为消息队列中间件实现异步解耦。前端使用模板引擎动态生成消息内容，后端通过策略模式支持多渠道适配。数据库采用主从复制提高读性能，Redis 缓存热点消息模板和用户推送历史。",
+      "design": "采用生产者-消费者模式架构，SendMsgService 作为统一入口负责模板校验和限流检查。消息按优先级（低/中/高/重试）路由到不同队列，消费者使用分布式锁做 Leader 选举确保单节点消费。定时消息使用 Redis ZSET 缓存到期时间点，避免全表扫描。渠道推送通过策略模式解耦，新渠道只需实现 MsgPushService 接口即可无缝接入。",
       "features": [
-        "多渠道统一推送：邮件、短信、飞书、推送等渠道统一接口",
-        "消息模板管理：支持变量替换、富文本编辑、预览发送",
-        "推送统计分析：实时展示推送成功率、失败原因、用户交互率",
-        "定时任务调度：支持单次、定时、周期性推送"
+        "多渠道统一推送：邮件（支持 SMTP/TLS）、短信、飞书 Webhook，一个接口调用所有渠道",
+        "消息模板管理：变量替换（${key} 语法）、富文本内容、模板审核状态控制",
+        "定时 & 周期推送：支持指定未来时间戳发送，Redis ZSET 保证准时触发",
+        "优先级队列：4 级优先级（低/中/高/重试），高优先级消息独占消费线程",
+        "推送记录追溯：完整消息生命周期追踪，支持按消息 ID 查询处理状态",
+        "限流保护：业务源级 + 全局限流，Redis 滑动窗口算法，精确控制发送频率",
+        "失败重试机制：自动重试 + 死信队列，最大重试次数可配置，保证最终可靠性"
       ],
       "demo": {
-        "type": "interactive-api",
-        "title": "API 接口体验",
-        "description": "尝试调用消息推送 API 接口",
-        "content": {
-          "endpoint": "https://api.example.com/messages/send",
-          "method": "POST",
-          "headers": {
-            "Content-Type": "application/json"
-          },
-          "exampleParams": {
-            "channels": ["email", "sms"],
-            "template": "welcome",
-            "variables": {
-              "name": "用户名",
-              "code": "123456"
-            }
-          },
-          "exampleResponse": {
-            "code": 200,
-            "message": "success",
-            "data": {
-              "task_id": "task_12345",
-              "channels": ["email", "sms"],
-              "status": "processing"
-            }
+          "type": "interactive-api",
+          "title": "在线接口调试",
+          "description": "体验 MsgCenter 完整的消息推送 API，包含模板管理与消息发送",
+          "content": {
+            "baseUrl": "http://localhost:8080/msg",
+            "steps": [
+              {
+                "step": 1,
+                "title": "创建模板",
+                "method": "POST",
+                "path": "/create_template",
+                "description": "创建消息模板，后续发送消息时使用",
+                "fields": [
+                  {"name": "name", "label": "模板名称", "type": "text", "required": true, "default": "欢迎邮件模板"},
+                  {"name": "signName", "label": "签名", "type": "text", "required": false, "default": "MsgCenter"},
+                  {"name": "sourceId", "label": "业务ID", "type": "text", "required": true, "default": "user-service"},
+                  {"name": "channel", "label": "推送渠道", "type": "select", "required": true, "options": [{"value": "1", "label": "邮件"}, {"value": "2", "label": "短信"}, {"value": "3", "label": "飞书"}], "default": "1"},
+                  {"name": "subject", "label": "消息主题", "type": "text", "required": false, "default": "欢迎注册"},
+                  {"name": "content", "label": "模板内容", "type": "textarea", "required": true, "default": "亲爱的 ${userName}，欢迎加入我们的平台！", "placeholder": "支持 ${变量名} 语法"}
+                ],
+                "responseField": "templateId"
+              },
+              {
+                "step": 2,
+                "title": "发送消息",
+                "method": "POST",
+                "path": "/send_msg",
+                "description": "使用已创建的模板发送消息",
+                "fields": [
+                  {"name": "to", "label": "接收方", "type": "text", "required": true, "default": "user@example.com", "placeholder": "邮箱/手机号/飞书ID"},
+                  {"name": "subject", "label": "消息主题", "type": "text", "required": false, "default": "欢迎注册"},
+                  {"name": "templateId", "label": "模板ID", "type": "text", "required": true, "fromPrevious": true},
+                  {"name": "priority", "label": "优先级", "type": "select", "required": false, "options": [{"value": "1", "label": "低"}, {"value": "2", "label": "中"}, {"value": "3", "label": "高"}], "default": "2"},
+                  {"name": "templateData", "label": "模板变量", "type": "json", "required": false, "default": "{\"userName\": \"张三\"}"}
+                ],
+                "responseField": "msgId"
+              },
+              {
+                "step": 3,
+                "title": "查询消息状态",
+                "method": "GET",
+                "path": "/get_msg_record",
+                "description": "查询消息发送状态和详情",
+                "fields": [
+                  {"name": "msgId", "label": "消息ID", "type": "text", "required": true, "fromPrevious": true}
+                ],
+                "responseField": null
+              }
+            ],
+            "note": "本地启动 MsgCenter 后端服务后，在此输入服务地址即可体验完整的消息推送流程"
           }
         }
-      }
     },
     {
       "slug": "video-platform",
