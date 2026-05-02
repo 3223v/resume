@@ -107,7 +107,7 @@
           "title": "在线接口调试",
           "description": "体验 MsgCenter 完整的消息推送 API，包含模板管理与消息发送",
           "content": {
-            "baseUrl": "http://localhost:8080/msg",
+            "baseUrl": "http://122.51.226.99:8080/msg",
             "steps": [
               {
                 "step": 1,
