@@ -27,15 +27,15 @@
   "skills": [
     {
       "group": "开发能力",
-      "items": ["Java", "Next.js", "LangGraph"]
+      "items": ["Cpp","Java","SpingBoot","Next.js", "LangGraph","Python"]
     },
     {
       "group": "系统能力",
-      "items": ["Redis", "MySQL", "Kafka", "Git"]
+      "items": ["Redis", "MySQL", "Kafka", "Git", "Docker", "Linux"]
     },
     {
       "group": "其他",
-      "items": ["计算机网络", "数据结构与算法", "操作系统","CET-4","Vibe coding"]
+      "items": ["计算机网络", "CET-4","数据结构与算法", "操作系统", "数据库系统", "Vibe coding"]
     }
   ],
   "experience": [
@@ -79,10 +79,10 @@
     {
       "slug": "message-push-platform",
       "title": "消息推送平台",
-      "category": "个人项目",
-      "year": "2024",
+      "category": "比赛项目",
+      "year": "2024/4-204/12",
       "summary": "基于 SpringBoot + MySQL + Redis + Kafka 的企业级消息推送中心，支持多渠道（邮件、短信、飞书）统一推送，具备模板管理、定时发送、优先级队列、限流控制、失败重试等能力。",
-      "stack": ["Java 17", "Spring Boot 3.3", "MyBatis-Plus", "Redis", "Kafka", "MySQL"],
+      "stack": ["Java 17", "Spring Boot 3.3", "MyBatis-Plus", "Redis", "Kafka", "MySQL","古法编程"],
       "coverTone": "mist",
       "link": "https://github.com/3223v/msgcenter",
       "highlights": [
@@ -160,7 +160,7 @@
       "slug": "video-platform",
       "title": "短视频平台",
       "category": "学校企业实训项目",
-      "year": "2024",
+      "year": "2025/1-2025/4",
       "summary": "基于 React + MySQL 开发的短视频社交平台，支持视频上传、推荐流、评论互动。",
       "stack": ["React", "Node.js", "MySQL", "FFmpeg", "Redis"],
       "coverTone": "paper",
@@ -195,10 +195,10 @@
       "title": "基于AI的多用户模拟系统",
       "category": "个人项目",
       "year": "2026",
-      "summary": "基于 React + MySQL 开发的短视频社交平台，支持视频上传、推荐流、评论互动。",
-      "stack": ["React", "AI","Codex","Vibe coding"],
+      "summary": "基于AI的多用户模拟系统，支持用户行为模拟和互动，采用Next.js架构。",
+      "stack": ["Next.js", "AI","Codex","Vibe coding"],
       "coverTone": "program",
-      "link": "",
+      "link": "https://github.com/3223v/xtplay",
       "highlights": [
         "实现信息流推荐算法，根据用户观看历史和点赞行为个性化推荐视频内容",
         "支持视频上传自动转码处理，生成多清晰度版本适配不同网络环境",
@@ -229,9 +229,43 @@
       "title": "通用Agent系统",
       "category": "个人项目",
       "year": "2026",
-      "summary": "基于 React + MySQL 开发的短视频社交平台，支持视频上传、推荐流、评论互动。",
-      "stack": ["Python"],
-      "coverTone": "paper",
+      "summary": "不采用框架，从零构建一个通用Agent系统，支持复杂任务执行。",
+      "stack": ["Python","Agent"],
+      "coverTone": "program",
+      "link": "",
+      "highlights": [
+        "实现信息流推荐算法，根据用户观看历史和点赞行为个性化推荐视频内容",
+        "支持视频上传自动转码处理，生成多清晰度版本适配不同网络环境",
+        "实现实时评论系统和用户互动功能，支持弹幕、点赞、收藏"
+      ],
+      "design": "前端采用虚拟滚动优化信息流渲染性能，后端使用微服务架构分离视频处理、推荐、社交三大模块。推荐算法基于用户行为数据进行协同过滤，视频处理使用 FFmpeg 异步转码，元数据存储在 MySQL，热点数据缓存在 Redis。",
+      "features": [
+        "视频上传与转码：支持多格式上传，自动生成 1080p/720p/480p 多清晰度版本",
+        "个性化推荐流：基于用户观看历史和行为的推荐算法",
+        "社交互动系统：评论、弹幕、点赞、收藏、分享、关注等功能",
+        "用户管理后台：视频审核、用户数据分析、内容管理"
+      ],
+      "demo": {
+        "type": "image-gallery",
+        "title": "平台截图",
+        "description": "短视频平台功能展示",
+        "content": {
+          "images": [
+            {"title": "信息流页面", "url": ""},
+            {"title": "视频详情页", "url": ""},
+            {"title": "用户中心", "url": ""}
+          ]
+        }
+      }
+    },
+    {
+      "slug": "SillyTavern",
+      "title": "开源项目SillyTavern重构",
+      "category": "个人项目",
+      "year": "2026",
+      "summary": "对知名开源项目SillyTavern进行重构，提升可维护性，增加客户端APP，重绘前端。",
+      "stack": ["Node.js","Next.js","Flutter"],
+      "coverTone": "program",
       "link": "",
       "highlights": [
         "实现信息流推荐算法，根据用户观看历史和点赞行为个性化推荐视频内容",
@@ -262,21 +296,31 @@
   "articles": [
     {
       "slug": "agent-introduction",
-      "title": "Agent系统概论",
-      "date": "2026-03-18",
+      "title": "Agent系统介绍",
+      "date": "2025-09-18",
       "readTime": "5 min read",
       "excerpt": "初步介绍Agent系统的概念，工作流程，构建方法",
-      "tags": ["Agent", "AI"],
+      "tags": ["Agent", "AI","Introduction"],
       "content": "<h2>为什么简历需要是活的系统</h2><p>一份好的简历网站应该快速回答两个问题：这个人做什么工作，他们的判断力是否值得信任。</p><p>最快的路径并不总是更多的视觉噪音。清晰的信息层级、有力的动词和精心挑选的证明点通常比拥挤的页面更能传达专业性。</p><h2>数据模型是核心</h2><p>把数据模型当作核心产品。一旦档案、项目、角色、写作和链接结构化了，界面就可以在不重写故事的情况下演进。这意味着你可以从不同的角度展示相同的信息，而不需要重新整理内容。</p><p>这种方法使得简历系统能够长期维护，每次添加新项目或经验时，界面会自动适应。</p>"
     },
     {
-      "slug": "test-article",
-      "title": "测试标题显示",
-      "date": "2026-02-07",
+      "slug": "python-langgraph-introduction",
+      "title": "Python版LangGraph介绍",
+      "date": "2025-12-07",
       "readTime": "4 min read",
-      "excerpt": "测试摘录显示.",
-      "tags": ["Test", "测试"],
+      "excerpt": "介绍Python版LangGraph库，提供更简洁的接口和更强大的功能。",
+      "tags": ["AI", "Python", "LangGraph","Introduction"],
       "content": "<h2>测试h2标签</h2><p>测试p标签</p><h2>每个层级都要有用途</h2><p>技巧是给每个层级分配工作：背景用于放松、边界用于分组、微妙的颜色用于方向、排版用于动力。当系统受到限制时，细节就变得可见。那正是感知质量往往存在的地方。</p><p>通过精心选择字体、控制色彩使用和谨慎的空间，可以创造出既简洁又充满意图的界面。这种方法在高端产品中特别有效。</p>"
+    },
+    {
+      "slug": "Nextjs-introduction",
+      "title": "Next.js入门指南",
+      "date": "2025-10-01",
+      "readTime": "6 min read",
+      "excerpt": "为有开发经验提供Next.js的快速入门指南，内容深入而不失简洁。",
+      "tags": ["Next.js", "Node.js", "Introduction"],
+      "content": "<h2>清晰优先</h2><p>在设计简历时，清晰度应该始终优先于炫酷的视觉效果。招聘经理通常在几秒钟内浏览大量简历，因此信息必须一目了然。使用明确的标题、简洁的语言和一致的格式来确保关键信息能够迅速传达。</p><h2>突出成就</h2><p>与其列出职责，不如强调成就。使用具体的数据和结果来展示你的影响力。例如，'提高了20%的用户参与度'比'负责用户参与'更具说服力。这种方法不仅展示了你的能力，还能让招聘经理看到你为公司带来的实际价值。</p>"
+
     }
   ]
 }

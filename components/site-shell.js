@@ -39,7 +39,7 @@ export function SiteShell({ children }) {
       <main>{children}</main>
       <footer className="border-t border-black/6 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <p>© 2026 {profile.name}. Built by codex.</p>
+          <p>© 2026 {profile.name}. Built by AI.</p>
           <div className="flex gap-4">
             {profile.links.map((link) => (
               <a key={link.label} href={link.href} className="transition hover:text-[var(--ink)]">
